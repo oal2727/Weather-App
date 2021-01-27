@@ -1,0 +1,121 @@
+.weather-initial{
+    margin: auto;
+  position: relative;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e2e2e;
+ 
+}
+.weather-initial:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+  }
+  .weather-initial:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(30px);
+  }
+  .weather-initial:after,
+  .weather-initial:before {
+    background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}
+.weather-content{
+    padding: 20px;
+  color: #fff;
+  width: 80%;
+}
+.weather-header{
+display: flex;
+  margin: auto;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.weather-column{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+.weather-temperature{
+    margin-top:20px;
+    font-weight: bold;
+    font-size: 40px;
+    font-family:monospace;
+}
+
+.weather-description{
+    font-size: 21px;
+    font-weight: 600;
+    font-family:sans-serif;
+}
+.weather-body{
+    background: transparent;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid white;
+    height: 200px;
+}
+.weather-body-content{
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 90%;
+    margin: auto;
+    grid-auto-rows: minmax(10px, auto);
+}
+.weather-box{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+}
+.weather-box-temperature{
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    font-family:monospace;
+}
+.weather-box-description{
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    font-family:sans-serif;
+}
+@media (max-width: 650px) {
+    .weather-initial{
+        height: 530px;
+        width: 300px;
+    }
+    .weather-content{
+        width:100%;
+    }
+    .weather-body{
+        height: 300px;
+    }
+    .weather-body-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .weather-column{
+        margin-top:10px;
+    }
+
+   
+}
